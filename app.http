@@ -22,7 +22,6 @@ Content-Type: application/json
 Accept: application/json
 
 
-
 ###
 GET http://localhost:3000/getPosts/
 Content-Type: application/json 
