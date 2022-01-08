@@ -117,16 +117,11 @@ app.post("/posts/", async (req, res) => {
 });
 
 app.get("/getPosts/", async (request, response) => {
-  try {
-    const getStatesQuery = `
+  const getStatesQuery = `
     SELECT
       *
     FROM
       post;`;
-    const statesArray = await db.all(getStatesQuery);
-    response.send(statesArray);
-  } catch (error) {
-    response.send("error");
-    response.status(200);
-  }
+  const statesArray = await db.all(getStatesQuery);
+  response.send(statesArray);
 });
